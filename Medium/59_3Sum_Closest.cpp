@@ -13,8 +13,10 @@ public:
         sort(nums.begin(), nums.end());
 
         int closest_sum = INT_MAX;
-        for (int i = 0; i < nums.size(); i++) {
-            int start = i + 1, end = nums.size() - 1;
+        bool found = false;
+        int len = nums.size();
+        for (int i = 0; i < len - 2; i++) {
+            int start = i + 1, end = len - 1;
             while (start < end) {
                 int sum = nums[i] + nums[start] + nums[end];
                 if (sum == target) {
@@ -25,8 +27,9 @@ public:
                     end--;
                 }
 
-                if (abs(target - sum) < abs(target - closest_sum)) {
+                if (!found || abs(target - sum) < abs(target - closest_sum)) {
                     closest_sum = sum;
+                    found = true;
                 }
             }
         }
