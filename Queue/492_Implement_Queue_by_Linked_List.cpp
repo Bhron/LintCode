@@ -1,0 +1,1 @@
+../Easy/492_Implement_Queue_by_Linked_List.cpp
