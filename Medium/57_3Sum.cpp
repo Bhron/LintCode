@@ -13,13 +13,14 @@ public:
 
         sort(nums.begin(), nums.end());
 
-        for (int i = 0; i < nums.size(); i++) {
+        int len = nums.size();
+        for (int i = 0; i < len - 2; i++) {
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
 
             int a = nums[i];
-            int start = i + 1, end = nums.size() - 1;
+            int start = i + 1, end = len - 1;
             while (start < end) {
                 if (start > i + 1 && nums[start] == nums[start - 1]) {
                     start++;
@@ -30,6 +31,7 @@ public:
                 if (sum == -a) {
                     triplets.push_back(vector<int>{a, nums[start], nums[end]});
                     start++;
+                    end--;
                 } else if (sum < -a) {
                     start++;
                 } else {
