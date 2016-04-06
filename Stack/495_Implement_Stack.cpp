@@ -1,0 +1,1 @@
+../Easy/495_Implement_Stack.cpp
