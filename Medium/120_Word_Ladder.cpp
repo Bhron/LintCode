@@ -30,13 +30,15 @@ public:
 
                 vector<string> transformations = get_transformations(word, dict);
                 for (int j = 0; j < transformations.size(); j++) {
-                    if (transformations[j] == end) {
+                    string next = transformations[j];
+
+                    if (next == end) {
                         return length;
                     }
 
-                    if (hash.find(transformations[j]) == hash.end()) {
-                        q.push(transformations[j]);
-                        hash.insert(transformations[j]);
+                    if (hash.find(next) == hash.end()) {
+                        q.push(next);
+                        hash.insert(next);
                     }
                 }
             }
