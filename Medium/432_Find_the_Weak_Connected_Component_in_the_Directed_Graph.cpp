@@ -35,8 +35,6 @@ public:
 
         int counter = 0;
         for (int i = 0; i < nodes.size(); i++) {
-            DirectedGraphNode* node = nodes[i];
-
             int parent = find(nodes[i]->label);
             if (hash.find(parent) == hash.end()) {
                 hash[parent] = counter++;
