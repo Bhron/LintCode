@@ -50,6 +50,8 @@ private:
             return;
         }
 
+        board[x][y] = 'C';
+
         queue<Pair> q;
         q.push(Pair(x, y));
 
@@ -57,14 +59,13 @@ private:
             Pair p = q.front();
             q.pop();
 
-            board[p.x][p.y] = 'C';
-
             static const int dx[4] = { -1, 1, 0, 0 };
             static const int dy[4] = { 0, 0, -1, 1 };
             for (int i = 0; i < 4; i++) {
                 int nx = p.x + dx[i];
                 int ny = p.y + dy[i];
                 if (0 <= nx && nx < n && 0 <= ny && ny < m && board[nx][ny] == 'O') {
+                    board[nx][ny] = 'C';
                     q.push(Pair(nx, ny));
                 }
             }
