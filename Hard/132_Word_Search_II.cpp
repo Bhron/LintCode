@@ -49,6 +49,7 @@ public:
         for (int i = 0; i < words.size(); i++) {
             if (hash.find(words[i]) != hash.end()) {
                 existing_words.push_back(words[i]);
+                hash.erase(words[i]);
             }
         }
 
