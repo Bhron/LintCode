@@ -1,5 +1,5 @@
-//Use array to store links
-///**
+// Use array to store links
+/**
  * Your Trie object will be instantiated and called as such:
  * Trie trie;
  * trie.insert("lintcode");
