@@ -1,4 +1,4 @@
-// Divide & Conquer - O(nlogn) Time, O(1) Space
+// Divide & Conquer - O(nlogn) Time, O(1) Space or O((logk)^2) Space (count recursion call stack space)
 /**
  * Definition of ListNode
  * class ListNode {
@@ -64,7 +64,7 @@ private:
 };
 
 
-// Priority Queue - O(nlogn) Time, O(n) Space
+// Priority Queue - O(nlogn) Time, O(k) Space
 /**
  * Definition of ListNode
  * class ListNode {
