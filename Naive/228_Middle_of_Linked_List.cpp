@@ -21,16 +21,11 @@ public:
             return NULL;
         }
 
-        ListNode *fast = head;
+        ListNode *fast = head->next;
         ListNode *slow = head;
 
-        while (fast->next != NULL) {
-            fast = fast->next;
-            if (fast->next == NULL) {
-                break;
-            }
-            fast = fast->next;
-
+        while (fast != NULL && fast->next != NULL) {
+            fast = fast->next->next;
             slow = slow->next;
         }
 
@@ -49,11 +44,16 @@ public:
             return NULL;
         }
 
-        ListNode *fast = head->next;
+        ListNode *fast = head;
         ListNode *slow = head;
 
-        while (fast != NULL && fast->next != NULL) {
-            fast = fast->next->next;
+        while (fast->next != NULL) {
+            fast = fast->next;
+            if (fast->next == NULL) {
+                break;
+            }
+            fast = fast->next;
+
             slow = slow->next;
         }
 
