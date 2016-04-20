@@ -1,0 +1,1 @@
+../Easy/142_O(1)_Check_Power_of_2.cpp
