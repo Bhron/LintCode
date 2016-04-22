@@ -1,0 +1,1 @@
+../Easy/60_Search_Insert_Position.cpp
