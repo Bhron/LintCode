@@ -1,0 +1,1 @@
+../Medium/52_Next_Permutation.cpp
